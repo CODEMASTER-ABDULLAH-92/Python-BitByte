@@ -40,7 +40,6 @@
 
 ```bash
 git clone https://github.com/CODEMASTER-ABDULLAH-92/Python-BitByte
-cd Python
 ```
 ### 💡 Requirements
 
@@ -106,11 +105,11 @@ Contributions are **welcome and appreciated**! 💙
   <a href="https://github.com/CODEMASTER-ABDULLAH-92/Python-BitByte/pulls">
     <img src="https://img.shields.io/badge/🛠️-Contribute-orange" alt="Contribute">
   </a>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=CODEMASTER-ABDULLAH-92/Python-BitByte" alt="Visitors">
 </div>
 
 ---
 <div>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=CODEMASTER-ABDULLAH-92/Python-BitByte" alt="Visitors">
 > ⭐ Star this repository if you find it helpful — Happy Learning!
 
 </div>
