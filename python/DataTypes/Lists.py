@@ -1,109 +1,141 @@
-# 🟩 Lists in Python
+# ============================================
+# 📘 list.py — Lists in Python (Detailed Guide)
+# ============================================
 
-# ==============================================
-# ✅ Definition:
-# ==============================================
-# A list is a collection of items stored in a single variable.
-# It is ordered, mutable (can be changed), and can contain different data types.
+# 🟩 What is a List?
+# A list is a collection (sequence) of items that are:
+# - Ordered
+# - Mutable (can be changed)
+# - Can store different data types (int, string, float, etc.)
 
 # Example:
-numbers = [10, 20, 30, 40]
-fruits = ["apple", "banana", "mango"]
-mixed = [25, "Abdullah", 3.14, True]
+fruits = ["apple", "banana", "cherry"]
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
 
 
+# ====================================================
+# 🟨 INDEXING and SLICING
+# ====================================================
 
-# ==============================================
-# ✅ Syntax:
-# ==============================================
-# Lists are created using square brackets [] with items separated by commas.
-my_list = [1, 2, 3, 4, 5]
+# 🧩 Indexing:
+# Each element in a list has an index (position) starting from 0.
+# Syntax: list[index]
 
+print(fruits[0])   # First element → apple
+print(fruits[1])   # Second element → banana
+print(fruits[-1])  # Last element → cherry (negative index counts from end)
 
+# 🧩 Slicing:
+# Used to access a range of elements.
+# Syntax: list[start:end:step]
+# (start is inclusive, end is exclusive)
 
-# ==============================================
-# ✅ Accessing List Elements:
-# ==============================================
-# Indexing starts from 0.
-
-fruits = ["apple", "banana", "mango"]
-print(fruits[0])   # apple
-print(fruits[2])   # mango
-
-# 🧠 Negative Indexing:
-print(fruits[-1])  # mango (last item)
-print(fruits[-2])  # banana
-
-
-
-# ==============================================
-# ✅ List Slicing:
-# ==============================================
-# You can extract parts of a list using slicing syntax.
-numbers = [10, 20, 30, 40, 50]
-
-print(numbers[1:4])   # [20, 30, 40]
-print(numbers[:3])    # [10, 20, 30]
-print(numbers[2:])    # [30, 40, 50]
-
-# Syntax: list[start:end] → end index not included
+print(fruits[0:2])   # ['apple', 'banana']
+print(fruits[:2])    # ['apple', 'banana'] → same as above (start defaults to 0)
+print(fruits[1:])    # ['banana', 'cherry'] → end defaults to last
+print(fruits[::-1])  # Reverse the list
 
 
+# ====================================================
+# 🟨 LIST METHODS
+# ====================================================
 
-# ==============================================
-# ✅ List Methods:
-# ==============================================
+# Lists come with several built-in methods for manipulation.
 
-fruits = ["apple", "banana", "mango"]
+numbers = [5, 2, 9, 1]
+print("\nOriginal numbers:", numbers)
 
-fruits.append("grape")         # Adds element at the end
-fruits.insert(1, "orange")     # Inserts at specific position
-fruits.remove("banana")        # Removes first occurrence
-fruits.pop()                   # Removes last element
-fruits.sort()                  # Sorts in ascending order
-fruits.reverse()               # Reverses order
-
-print(fruits)
-print(len(fruits))             # Returns number of elements
-
-
-
-# ==============================================
-# ✅ Lists Are Mutable:
-# ==============================================
-# You can change items after creation.
-
-fruits = ["apple", "banana", "mango"]
-fruits[1] = "orange"
-print(fruits)  # ['apple', 'orange', 'mango']
-
-
-
-# ==============================================
-# ✅ Example Program:
-# ==============================================
-
-numbers = [5, 10, 15, 20]
-print("Original List:", numbers)
-
-numbers.append(25)
+# 1️⃣ append() → Adds an item to the end
+numbers.append(7)
 print("After append:", numbers)
 
-numbers.remove(10)
+# 2️⃣ extend() → Adds multiple items at once (merges lists)
+numbers.extend([3, 8])
+print("After extend:", numbers)
+
+# 3️⃣ insert() → Adds item at a specific index
+numbers.insert(2, 10)
+print("After insert:", numbers)
+
+# 4️⃣ remove() → Removes the first occurrence of a value
+numbers.remove(9)
 print("After remove:", numbers)
 
-print("Length of list:", len(numbers))
+# 5️⃣ pop() → Removes and returns item at a given index (default last)
+removed_item = numbers.pop()
+print("Popped item:", removed_item)
+print("After pop:", numbers)
+
+# 6️⃣ sort() → Sorts list in ascending order
+numbers.sort()
+print("After sort:", numbers)
+
+# 7️⃣ reverse() → Reverses the order of elements
+numbers.reverse()
+print("After reverse:", numbers)
+
+# 8️⃣ count() → Counts occurrences of a value
+print("Count of 2:", numbers.count(2))
+
+# 9️⃣ index() → Returns the first index of a value
+print("Index of 10:", numbers.index(10))
+
+# 🔟 clear() → Removes all items from the list
+temp_list = [1, 2, 3]
+temp_list.clear()
+print("After clear:", temp_list)
 
 
+# ====================================================
+# 🟨 LIST COMPREHENSION
+# ====================================================
 
-# ==============================================
-# 🧾 Summary Table:
-# ==============================================
+# List comprehension provides a short way to create new lists.
 
-| Property               | Description             |
-| ---------------------- | ----------------------- |
-| **Type**               | Collection (list)       |
-| **Ordered**            | ✅ Yes                   |
-| **Mutable**            | ✅ Yes (can change)      |
-| **Duplicates allowed** | ✅ Yes                   |
-| **Data type**          | Can hold multiple types  |
+# Example 1: Squares of numbers
+squares = [x**2 for x in range(5)]
+print("\nSquares:", squares)
+
+# Example 2: Convert all fruits to uppercase
+upper_fruits = [fruit.upper() for fruit in fruits]
+print("Uppercase Fruits:", upper_fruits)
+
+# Example 3: Filter even numbers
+evens = [x for x in range(10) if x % 2 == 0]
+print("Even Numbers:", evens)
+
+
+# ====================================================
+# 🟨 NESTED LISTS (List within a List)
+# ====================================================
+
+# You can store lists inside other lists.
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing elements in nested lists:
+print("\nMatrix:")
+for row in matrix:
+    print(row)
+
+print("Element at row 1, col 2:", matrix[0][1])  # 2
+print("Element at row 3, col 3:", matrix[2][2])  # 9
+
+# Flattening a nested list using list comprehension
+flat = [num for row in matrix for num in row]
+print("Flattened list:", flat)
+
+
+# ====================================================
+# 🟩 SUMMARY
+# ====================================================
+# ✅ Indexing → Access single elements
+# ✅ Slicing → Access ranges or reverse lists
+# ✅ List Methods → Modify or manage list data
+# ✅ List Comprehension → Create new lists easily
+# ✅ Nested Lists → Store multiple lists inside one
+
+# 🎯 Lists are one of the most powerful and flexible data structures in Python!
