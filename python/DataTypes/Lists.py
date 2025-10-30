@@ -42,48 +42,66 @@ print(fruits[::-1])  # Reverse the list
 
 # Lists come with several built-in methods for manipulation.
 
-numbers = [5, 2, 9, 1]
-print("\nOriginal numbers:", numbers)
+
+# Initial list
+numbers = [1, 2, 9, 4, 2]
 
 # 1️⃣ append() → Adds an item to the end
 numbers.append(7)
 print("After append:", numbers)
+# Output: After append: [1, 2, 9, 4, 2, 7]
 
-# 2️⃣ extend() → Adds multiple items at once (merges lists)
+# 2️⃣ extend() → Adds multiple items at once like the append adding the only one item but the extend adds the multiple items 
 numbers.extend([3, 8])
 print("After extend:", numbers)
+# Output: After extend: [1, 2, 9, 4, 2, 7, 3, 8]
 
 # 3️⃣ insert() → Adds item at a specific index
 numbers.insert(2, 10)
+
+# Here 2 is the index number while 10 is the value you needs to insert 
+
 print("After insert:", numbers)
+# Output: After insert: [1, 2, 10, 9, 4, 2, 7, 3, 8]
 
 # 4️⃣ remove() → Removes the first occurrence of a value
 numbers.remove(9)
+# Here remove function takes the value instead of the index number 
 print("After remove:", numbers)
+# Output: After remove: [1, 2, 10, 4, 2, 7, 3, 8]
 
-# 5️⃣ pop() → Removes and returns item at a given index (default last)
+# 5️⃣ pop() → Removes item from the last 
 removed_item = numbers.pop()
 print("Popped item:", removed_item)
 print("After pop:", numbers)
+# Output:
+# Popped item: 8
+# After pop: [1, 2, 10, 4, 2, 7, 3]
 
 # 6️⃣ sort() → Sorts list in ascending order
 numbers.sort()
 print("After sort:", numbers)
+# Output: After sort: [1, 2, 2, 3, 4, 7, 10]
 
 # 7️⃣ reverse() → Reverses the order of elements
 numbers.reverse()
 print("After reverse:", numbers)
+# Output: After reverse: [10, 7, 4, 3, 2, 2, 1]
 
 # 8️⃣ count() → Counts occurrences of a value
 print("Count of 2:", numbers.count(2))
+# Output: Count of 2: 2
 
 # 9️⃣ index() → Returns the first index of a value
 print("Index of 10:", numbers.index(10))
+# Output: Index of 10: 0
 
 # 🔟 clear() → Removes all items from the list
 temp_list = [1, 2, 3]
 temp_list.clear()
 print("After clear:", temp_list)
+# Output: After clear: []
+
 
 
 # ====================================================
@@ -93,6 +111,13 @@ print("After clear:", temp_list)
 # List comprehension provides a short way to create new lists.
 
 # Example 1: Squares of numbers
+
+# --------------------------------------------------
+# Syntax 
+# --------------------------------------------------
+
+# new_list = [expression for item in iterable if condition (stoping point)]
+
 squares = [x**2 for x in range(5)]
 print("\nSquares:", squares)
 
@@ -129,13 +154,3 @@ flat = [num for row in matrix for num in row]
 print("Flattened list:", flat)
 
 
-# ====================================================
-# 🟩 SUMMARY
-# ====================================================
-# ✅ Indexing → Access single elements
-# ✅ Slicing → Access ranges or reverse lists
-# ✅ List Methods → Modify or manage list data
-# ✅ List Comprehension → Create new lists easily
-# ✅ Nested Lists → Store multiple lists inside one
-
-# 🎯 Lists are one of the most powerful and flexible data structures in Python!
