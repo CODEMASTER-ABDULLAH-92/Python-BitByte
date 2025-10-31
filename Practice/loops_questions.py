@@ -99,3 +99,34 @@ else:
 # 🧠 Concept:
 # In Python, a for loop can have an else block.
 # 👉 The code inside the else block runs only if the loop completes normally (i.e., no break statement is used).
+
+# 15. Find the largest number in a list using a loop
+
+my_list = [2, 4, 5, 6, 8, 10, 14]
+
+maxValue = my_list[0]
+for num in my_list:
+    if num > maxValue:
+        maxValue = num
+
+print("Maximum Value:", maxValue)
+
+
+# 20. Create a password checker with limited attempts using a while loop
+
+password = "abdullah92"
+count = 0
+
+while count < 3:
+    usersPassword = input("Enter the password: ")
+    
+    if usersPassword == password:
+        print("✅ Logged in successfully!")
+        break
+    else:
+        print("❌ Incorrect password, try again.")
+        count += 1
+
+else:
+    # This else runs only if the while loop completes (no break)
+    print("🚫 You attempted 3 wrong passwords. Try again after 5 hours.")
