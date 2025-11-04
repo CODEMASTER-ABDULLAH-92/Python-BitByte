@@ -76,7 +76,11 @@ print("After removing department:", student)
 # dict.clear()    → removes all items
 
 # Example
-info = {"name": "Sara", "age": 19}
+info = {
+    "name": "Sara",
+    "age": 19
+    }
+
 print("Keys:", info.keys())
 print("Values:", info.values())
 print("Items:", info.items())
