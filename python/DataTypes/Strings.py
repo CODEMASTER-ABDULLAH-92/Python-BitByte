@@ -47,8 +47,6 @@ print(a * 3)           # Output: HelloHelloHello
 
 # ============================================================
 # 🐍 STRINGS IN PYTHON
-# Author: Muhammad Abdullah
-# File: strings_in_python.py
 # Description: A complete and aesthetic guide covering
 #              ➤ String Methods
 #              ➤ String Formatting (f-strings & .format)
@@ -122,10 +120,6 @@ print("🔹 rstrip():", text.rstrip()) # Output: '   Python is fun!'
 # ------------------------------------------------------------
 text = "Python is awesome"
 print("🔹 split():", text.split())   # Output: ['Python', 'is', 'awesome']
-
-csv = "apple,banana,mango"
-print("🔹 split(','):", csv.split(","))  # Output: ['apple', 'banana', 'mango']
-
 
 # ------------------------------------------------------------
 # 8️⃣ join(iterable)
@@ -221,7 +215,6 @@ print("🔹 len():", len(text))  # Output: 6
 # swapcase()   → Swap cases
 # capitalize() → First letter uppercase
 # title()      → Each word uppercase
-# center()     → Center align text
 # len()        → Get string length
 # ------------------------------------------------------------
 
@@ -267,65 +260,6 @@ print(f"|{name:>20}| Right aligned")
 # {var:.2f}       → Format decimal numbers
 # {var:<, >, ^}   → Align left, right, center
 # {var:10}        → Reserve width of 10 chars
-# ------------------------------------------------------------
-
-
-# ------------------------------------------------------------
-# 2️⃣ .format() METHOD
-# ------------------------------------------------------------
-# Works in older Python versions (pre-3.6)
-# Uses placeholders {} replaced by .format() arguments.
-# ------------------------------------------------------------
-name = "Abdullah"
-age = 21
-language = "Python"
-
-# Example 1: Basic formatting
-print("👨‍💻 My name is {} and I am {} years old.".format(name, age))
-
-# Example 2: Positional arguments
-print("{1} loves {2} and is {0} years old.".format(age, name, language))
-
-# Example 3: Named placeholders
-print("{n} is learning {lang} at age {a}.".format(n=name, lang=language, a=age))
-
-# Example 4: Formatting numbers
-price = 12345.6789
-print("💵 Product price: ${:.2f}".format(price))
-
-# Example 5: Alignment using format()
-print("|{:>15}| Right aligned".format("Python"))
-print("|{:<15}| Left aligned".format("Python"))
-print("|{:^15}| Center aligned".format("Python"))
-
-# ------------------------------------------------------------
-# ✨ .FORMAT QUICK NOTES
-# ------------------------------------------------------------
-# {}             → Default placeholder
-# {0}, {1}       → Positional arguments
-# {key=value}    → Named arguments
-# {:<, >, ^}     → Alignment
-# {:.2f}         → Decimal precision
-# ------------------------------------------------------------
-
-
-# ------------------------------------------------------------
-# 🎯 Comparison Example
-# ------------------------------------------------------------
-score = 98.456
-
-# f-string
-print(f"🏆 {name} scored {score:.1f}% in his exam!")
-
-# .format()
-print("🏆 {} scored {:.1f}% in his exam!".format(name, score))
-
-# ------------------------------------------------------------
-# END OF FILE
-# ------------------------------------------------------------
-print("\n✨ All String Concepts in Python Completed Successfully! ✨")
-
-
 
 
 
@@ -404,15 +338,3 @@ print("Last 3 chars →", sentence[-3:])
 
 # ✅ Skip characters
 print("Every 2nd char →", sentence[::2])
-
-
-# ============================================================
-# 🟪 SUMMARY
-# ============================================================
-# 🧾 Indexing → Access single characters
-# 🧾 Slicing  → Extract substring portions
-# 🧾 Syntax   → string[start:end:step]
-# 🧾 Negative indexing helps to count from the end
-# 🧾 Slicing does not modify the original string (strings are immutable)
-# ============================================================
-
