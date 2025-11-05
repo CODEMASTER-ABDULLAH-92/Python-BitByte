@@ -338,3 +338,33 @@ print("Last 3 chars →", sentence[-3:])
 
 # ✅ Skip characters
 print("Every 2nd char →", sentence[::2])
+
+
+# 16. Create a string with special characters and escape sequences
+
+# \n → New line
+# \t → Tab space
+# \' → Single quote
+# \" → Double quote
+# \\ → Backslash
+# \b → Backspace
+# \r → Carriage return
+
+# Example string containing different escape sequences
+text = "Hello!\nMy name is Abdullah.\tI\'m learning Python.\nHe said, \"Python is fun!\"\\"
+
+# Printing the string to see the output
+print(text)
+
+# ----------------------------------------
+# Example of raw string (r"")
+# A raw string ignores escape sequences and prints them as they are
+path = r"C:\Users\Abdullah\Documents\Python"
+print(path)
+
+# Output Explanation:
+# - \n creates a new line
+# - \t adds a tab space
+# - \" and \' allow quotes inside the string
+# - \\ prints a single backslash
+# - Raw string prints backslashes as normal characters
